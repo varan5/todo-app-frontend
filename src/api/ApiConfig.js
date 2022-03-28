@@ -1,5 +1,5 @@
 
-const BASE_URL = 'http://localhost:5000/api'
+const BASE_URL = 'https://todo-app-varan.herokuapp.com/api'
 
 const ApiConfig = {
   GET_ALL_TODOS: BASE_URL + '/todos/all',
