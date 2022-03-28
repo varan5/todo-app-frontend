@@ -12,8 +12,18 @@
 }
 
 .your-todos-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-self: center;
+  margin-left: 10px;
+}
+
+.loader-gif {
+  height: 100px;
+  width: 180px;
+}
+
+.loader-gif-container {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ align-self: center;
 }

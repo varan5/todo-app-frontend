@@ -11,11 +11,14 @@ const Todos = () => {
   const history = useHistory()
 
   const [todos, setTodos] = useState([])
+  const [showLoader, setShowLoader] = useState(false)
 
   const getAllTodos = async () => {
+    setShowLoader(true)
     const getAllTodosUrl = ApiConfig.GET_ALL_TODOS
     const result = await simpleGetCall(getAllTodosUrl)
     setTodos(result.data.todos)
+    setShowLoader(false)
   }
 
   useEffect(() => {
@@ -33,17 +36,14 @@ const Todos = () => {
   }
 
   const editClickedTodo = async (todo) => {
-    // history.push('/create')
     history.push({
       pathname: '/todo-details',
       state: { todoId: todo, isEdit: true }
     });
-
-    // sessionStorage.setItem('updatedTodo', todo._id)
   }
 
   return (
-    <div>
+    showLoader ? <div className="loader-gif-container"><img className="loader-gif" src="images/todo-gif.gif" /></div> : <div>
       <h2 className="your-todos-title">Your Todos</h2>
       <div className="your-todos-container">
         {
