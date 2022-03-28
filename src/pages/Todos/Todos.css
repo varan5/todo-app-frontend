@@ -1,0 +1,19 @@
+.edit-delete-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.your-todos-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+}
+
+.your-todos-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-self: center;
+}
